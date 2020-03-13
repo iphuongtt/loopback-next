@@ -51,15 +51,24 @@ In LoopBack 4, you can implement a similar functionality as follows:
 2. LoopBack 4 does not provide first-class support for file downloads yet, see
    [loopback-next#2230](https://github.com/strongloop/loopback-next/issues/2230).
    As a workaround, you can inject the full Express response object and use
-   Express API to stream the response body. (See the discussion in the linked
-   GitHub issue for more details.)
+   Express API to stream the response body. Find more details in the discussion
+   in the linked GitHub issue, check out our
+   [File Upload Example](https://github.com/strongloop/loopback-next/tree/master/examples/file-upload)
+   for a fully working application.
 
 3. To connect to your cloud storage provider, you can use `pkgcloud` or directly
-   the Node.js client library provided by your provider.
+   the Node.js client library provided by your provider. You may want to check
+   [multer-storage-pkgcloud](https://github.com/dustin-H/multer-storage-pkgcloud)
 
 4. Finally, create a [Service](../Services.md) providing File and Container APIs
    in TypeScript and one or more [Controllers](../Controllers.md) to implement
    the REST API.
+
+_If you are happy with the outcome, then please consider packaging your code as
+a [LoopBack Component](../Creating-components.md) and sharing your great work
+with the entire LoopBack community. We are happy to promote it in our
+documentation, just submit a pull request to add your component to
+[Using components](../Using-components.md)._
 
 ## Push notifications
 
